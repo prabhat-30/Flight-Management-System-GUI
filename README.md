@@ -131,7 +131,7 @@ Apache Maven
 2. Clone the Repository
 Open your terminal and clone this repository to your local machine:
 
-git clone https://github.com/username/repository name.git
+git clone https://github.com/username/repository-name.git
 
 cd your-repository-name
 
