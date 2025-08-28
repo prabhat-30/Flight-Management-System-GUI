@@ -2,7 +2,7 @@
 ============================================================================================
 SkyPass is a comprehensive desktop application for flight booking and management, built with JavaFX. This project demonstrates a complete airline reservation system, featuring separate interfaces for passengers and administrators, real-time flight data integration, and a secure database backend. The application was originally a command-line tool that has been fully migrated to a modern, responsive Graphical User Interface (GUI).
 
-Link for the image :-   https://ibb.co/album/mFw0kj
+Link for the image :-   https://jumpshare.com/folder/B832Uy9ukXuvdHma75Cf
 
                 
 Features
