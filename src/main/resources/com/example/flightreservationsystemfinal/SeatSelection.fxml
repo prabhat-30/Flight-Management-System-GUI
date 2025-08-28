@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flightreservationsystemfinal.SeatSelectionController" prefHeight="600.0" prefWidth="500.0">
+    <top>
+        <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #4682B4; -fx-padding: 10;">
+            <Label text="Select Your Seats" textFill="WHITE">
+                <font><Font name="System Bold" size="20.0" /></font>
+            </Label>
+            <Label fx:id="infoLabel" text="Please select 1 seat(s)." textFill="WHITE" />
+        </VBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-padding: 15;">
+            <content>
+                <GridPane fx:id="seatGridPane" hgap="5" vgap="5" alignment="CENTER" />
+            </content>
+        </ScrollPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" spacing="20" style="-fx-padding: 15;">
+            <Button fx:id="confirmButton" onAction="#handleConfirm" text="Confirm Selection" disable="true" style="-fx-font-weight: bold; -fx-background-color: #90EE90;"/>
+            <Button onAction="#handleCancel" text="Cancel Booking"/>
+        </HBox>
+    </bottom>
+</BorderPane>

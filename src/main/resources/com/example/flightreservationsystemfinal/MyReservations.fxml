@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flightreservationsystemfinal.MyReservationsController" prefHeight="600.0" prefWidth="900.0">
+    <top>
+        <VBox alignment="CENTER" style="-fx-background-color: #0A1931; -fx-padding: 15;">
+            <Label text="My Reservations" textFill="WHITE">
+                <font><Font name="System Bold" size="24.0"/></font>
+            </Label>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="reservationsTable" style="-fx-padding: 10;">
+            <columns>
+                <TableColumn text="Ticket ID" prefWidth="200"><cellValueFactory><PropertyValueFactory property="ticketId"/></cellValueFactory></TableColumn>
+                <TableColumn text="Flight No." prefWidth="100"><cellValueFactory><PropertyValueFactory property="flightNumber"/></cellValueFactory></TableColumn>
+                <TableColumn text="Airline" prefWidth="120"><cellValueFactory><PropertyValueFactory property="airlineName"/></cellValueFactory></TableColumn>
+                <TableColumn text="Date" prefWidth="100"><cellValueFactory><PropertyValueFactory property="departureDate"/></cellValueFactory></TableColumn>
+                <TableColumn text="Route" prefWidth="150"><cellValueFactory><PropertyValueFactory property="originCity"/></cellValueFactory></TableColumn>
+                <TableColumn text="Seats" prefWidth="150"><cellValueFactory><PropertyValueFactory property="seatNumbers"/></cellValueFactory></TableColumn>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-padding: 15;" spacing="20">
+            <Button onAction="#handleViewTicket" text="View/Save E-Ticket"/>
+
+            <Button onAction="#handleCancelTicket" text="Cancel Selected Ticket" style="-fx-background-color: #FF6347; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+            <Button onAction="#handleBack" text="Back to Dashboard"/>
+        </HBox>
+    </bottom>
+</BorderPane>

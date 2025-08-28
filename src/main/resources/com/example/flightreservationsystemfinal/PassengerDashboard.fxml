@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flightreservationsystemfinal.PassengerDashboardController" prefHeight="700.0" prefWidth="1000.0">
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #0A1931; -fx-padding: 15;">
+            <Label fx:id="welcomeLabel" text="Welcome, Passenger!" textFill="WHITE">
+                <font><Font name="System Bold" size="24.0"/></font>
+            </Label>
+            <HBox alignment="CENTER" spacing="20">
+                <Button onAction="#handleMyReservations" text="My Reservations"/>
+                <Button onAction="#handleLogout" text="Logout" style="-fx-background-color: #F08080;"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="15" style="-fx-padding: 20;">
+            <Label text="Search for a Flight">
+                <font><Font name="System Bold" size="20.0"/></font>
+            </Label>
+            <GridPane hgap="10" vgap="10" alignment="CENTER">
+                <padding><Insets top="10" bottom="20"/></padding>
+                <Label text="Origin (IATA):" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="originField" promptText="e.g., HYD" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Label text="Destination (IATA):" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                <TextField fx:id="destinationField" promptText="e.g., DEL" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+                <Label text="Departure Date:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <DatePicker fx:id="datePicker" promptText="YYYY-MM-DD" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <Button onAction="#handleSearchFlights" text="Search Flights ✈️" GridPane.rowIndex="1" GridPane.columnIndex="3" style="-fx-font-weight: bold; -fx-background-color: #ADD8E6;"/>
+            </GridPane>
+
+            <TableView fx:id="flightsTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn text="Flight No." prefWidth="120"><cellValueFactory><PropertyValueFactory property="flightNumber"/></cellValueFactory></TableColumn>
+                    <TableColumn text="From" prefWidth="80"><cellValueFactory><PropertyValueFactory property="originCity"/></cellValueFactory></TableColumn>
+                    <TableColumn text="To" prefWidth="80"><cellValueFactory><PropertyValueFactory property="destinationCity"/></cellValueFactory></TableColumn>
+                    <TableColumn text="Depart" prefWidth="100"><cellValueFactory><PropertyValueFactory property="departureTime"/></cellValueFactory></TableColumn>
+                    <TableColumn text="Arrive" prefWidth="100"><cellValueFactory><PropertyValueFactory property="arrivalTime"/></cellValueFactory></TableColumn>
+                    <TableColumn text="Duration" prefWidth="100"><cellValueFactory><PropertyValueFactory property="duration"/></cellValueFactory></TableColumn>
+                    <TableColumn text="Fare (INR)" prefWidth="120"><cellValueFactory><PropertyValueFactory property="fare"/></cellValueFactory></TableColumn>
+                </columns>
+            </TableView>
+            <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10;">
+                <Label text="Number of Seats:"/>
+                <Spinner fx:id="numSeatsSpinner" min="1" max="10" initialValue="1" prefWidth="70"/>
+                <Button onAction="#handleBookFlight" text="Book Selected Flight" style="-fx-font-weight: bold; -fx-background-color: #90EE90;"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

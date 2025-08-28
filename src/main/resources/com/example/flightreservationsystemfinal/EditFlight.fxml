@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flightreservationsystemfinal.EditFlightController">
+    <children>
+        <Label text="Edit Flight Details">
+            <font><Font name="System Bold" size="22.0" /></font>
+        </Label>
+
+        <HBox alignment="CENTER_LEFT" spacing="10" maxWidth="500.0">
+            <Label text="Flight Number:" minWidth="170.0"/>
+            <TextField fx:id="flightNumberField" editable="false" HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="10" maxWidth="500.0">
+            <Label text="Airline (IATA):" minWidth="170.0"/>
+            <TextField fx:id="airlineField" promptText="e.g., 6E" HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="10" maxWidth="500.0">
+            <Label text="Origin (IATA):" minWidth="170.0"/>
+            <TextField fx:id="originField" promptText="e.g., HYD" HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="10" maxWidth="500.0">
+            <Label text="Destination (IATA):" minWidth="170.0"/>
+            <TextField fx:id="destinationField" promptText="e.g., DEL" HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="10" maxWidth="500.0">
+            <Label text="Departure Date:" minWidth="170.0"/>
+            <DatePicker fx:id="datePicker" HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="10" maxWidth="500.0">
+            <Label text="Departure Time (HH:MM:SS):" minWidth="170.0"/>
+            <TextField fx:id="depTimeField" promptText="e.g., 14:30:00" HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="10" maxWidth="500.0">
+            <Label text="Arrival Time (HH:MM:SS):" minWidth="170.0"/>
+            <TextField fx:id="arrTimeField" promptText="e.g., 16:45:00" HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="10" maxWidth="500.0">
+            <Label text="Capacity:" minWidth="170.0"/>
+            <TextField fx:id="capacityField" promptText="e.g., 180" HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="10" maxWidth="500.0">
+            <Label text="Fare (INR):" minWidth="170.0"/>
+            <TextField fx:id="fareField" promptText="e.g., 5500.00" HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="10" maxWidth="500.0">
+            <Label text="Is Available:" minWidth="170.0"/>
+            <CheckBox fx:id="availableCheckBox"/>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets top="20.0" />
+            </padding>
+            <Button onAction="#handleSaveButtonAction" text="Save Changes" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Button onAction="#handleCancelButtonAction" text="Cancel" />
+        </HBox>
+    </children>
+</VBox>
