@@ -4,51 +4,7 @@ SkyPass is a comprehensive desktop application for flight booking and management
 
 Link for the image :-   https://ibb.co/album/mFw0kj
 
-FOLDER STRUCTURE
-=====================
-
-FlightReservationSystemFinal/
-│
-├── .gitignore          # Tells Git which files to ignore
-├── pom.xml             # Maven project configuration
-├── New.sql             # Your database setup script
-│
-└── src/
-    └── main/
-        ├── java/
-        │   └── com/example/flightreservationsystemfinal/
-        │       ├── Main.java
-        │       │
-        │       ├── controller/
-        │       │   ├── LoginController.java
-        │       │   ├── AdminDashboardController.java
-        │       │   ├── PassengerDashboardController.java
-        │       │   └── (all other controller files)
-        │       │
-        │       ├── model/
-        │       │   ├── User.java
-        │       │   ├── Flight.java
-        │       │   ├── Reservation.java
-        │       │   └── ApiFlight.java
-        │       │
-        │       ├── service/
-        │       │   ├── FlightBookingService.java
-        │       │   ├── FlightApiClient.java
-        │       │   └── SeatManager.java
-        │       │
-        │       └── util/
-        │           ├── Database.java
-        │           ├── SessionManager.java
-        │           ├── AlertHelper.java
-        │           └── PasswordHasher.java
-        │
-        └── resources/
-            └── com/example/flightreservationsystemfinal/
-                ├── Login.fxml
-                ├── AdminDashboard.fxml
-                └── (all other .fxml files)
                 
-
 Features
 ===========
 
